@@ -840,7 +840,9 @@ export default function Home() {
               }}>
                 Your work, your family, your life.
                 <br />
-                Your first step. STARTS NOW.
+                Your first step.
+                <br />
+                STARTS NOW.
               </p>
             </div>
           </div>
