@@ -419,6 +419,7 @@ export default function Home() {
               animation: visibleSections.has('about') ? 'slideInFromRight 0.8s ease-out 0.2s both' : 'none',
               lineHeight: 1.7,
               fontSize: '0.95rem',
+              marginTop: '-0.8rem',
             }}>
               <p style={{ margin: '0.5rem 0', color: '#cccccc' }}>
                 I train for real life.
