@@ -194,7 +194,7 @@ export default function Home() {
         position: 'sticky', 
         top: 0, 
         zIndex: 100, 
-        backgroundColor: '#ffffff', 
+        backgroundColor: '#000000', 
         borderBottom: '2px solid #FFD700', 
         padding: '1rem 1.5rem', 
         display: 'flex', 
@@ -204,7 +204,7 @@ export default function Home() {
         <h1 style={{ 
           fontSize: '1.5rem', 
           fontWeight: 800, 
-          color: '#1a1a1a', 
+          color: '#ffffff', 
           margin: 0,
           fontFamily: 'Outfit, sans-serif'
         }}>
@@ -237,9 +237,9 @@ export default function Home() {
             transform: mobileMenuOpen ? 'rotate(90deg)' : 'rotate(0deg)',
           }}
         >
-          <span style={{ width: '25px', height: '3px', backgroundColor: '#1a1a1a', display: 'block' }}></span>
-          <span style={{ width: '25px', height: '3px', backgroundColor: '#1a1a1a', display: 'block' }}></span>
-          <span style={{ width: '25px', height: '3px', backgroundColor: '#1a1a1a', display: 'block' }}></span>
+          <span style={{ width: '25px', height: '3px', backgroundColor: '#ffffff', display: 'block' }}></span>
+          <span style={{ width: '25px', height: '3px', backgroundColor: '#ffffff', display: 'block' }}></span>
+          <span style={{ width: '25px', height: '3px', backgroundColor: '#ffffff', display: 'block' }}></span>
         </button>
 
         {/* Mobile Menu */}
@@ -249,7 +249,7 @@ export default function Home() {
             top: '70px',
             left: 0,
             right: 0,
-            backgroundColor: '#ffffff',
+            backgroundColor: '#000000',
             borderBottom: '2px solid #FFD700',
             padding: '1.5rem',
             display: 'flex',
@@ -265,7 +265,7 @@ export default function Home() {
                 style={{
                   background: 'none',
                   border: 'none',
-                  color: '#1a1a1a',
+                  color: '#ffffff',
                   fontSize: '1rem',
                   cursor: 'pointer',
                   textAlign: 'left',
@@ -314,7 +314,7 @@ export default function Home() {
         {/* Hero Text */}
         <div style={{
           position: 'absolute',
-          top: '50%',
+          top: '35%',
           left: '50%',
           transform: 'translate(-50%, -50%)',
           textAlign: 'center',
@@ -342,14 +342,14 @@ export default function Home() {
             fontFamily: 'Liberation Mono, monospace',
             letterSpacing: '0.05em',
           }}>
-            Live stronger, live longer, for you and your family
+            Live Stronger. Live Longer.
           </p>
         </div>
 
         {/* Animated Arrow */}
         <div style={{
           position: 'absolute',
-          bottom: '2rem',
+          top: '55%',
           left: '50%',
           transform: 'translateX(-50%)',
           zIndex: 10,
@@ -370,55 +370,61 @@ export default function Home() {
         transition: 'opacity 0.6s ease-out',
       }}>
         <div style={{
-          display: 'flex',
-          gap: '1.5rem',
-          alignItems: 'flex-start',
-          flexWrap: 'nowrap',
           maxWidth: '1200px',
           margin: '0 auto',
         }}>
-          <div style={{
-            flex: '0 0 180px',
-            borderRadius: '0.8rem',
-            overflow: 'hidden',
-            border: '6px solid #FFD700',
+          <h2 style={{
+            fontSize: '2.2rem',
+            fontWeight: 800,
+            marginBottom: '1.5rem',
+            marginTop: 0,
+            fontFamily: 'Outfit, sans-serif',
+            color: '#FFD700',
             animation: visibleSections.has('about') ? 'slideInFromLeft 0.8s ease-out' : 'none',
-            minWidth: '180px',
           }}>
-            <img src="/amirulam.webp" alt="Amirul Khoo" style={{ width: '100%', height: 'auto', display: 'block' }} />
-          </div>
-          
+            Hi, I'm Amirul Khoo
+          </h2>
+
           <div style={{
-            flex: 1,
-            minWidth: '0',
-            animation: visibleSections.has('about') ? 'slideInFromRight 0.8s ease-out 0.2s both' : 'none',
+            display: 'flex',
+            gap: '1.5rem',
+            alignItems: 'flex-start',
+            flexWrap: 'nowrap',
           }}>
-            <h2 style={{
-              fontSize: '2.2rem',
-              fontWeight: 800,
-              marginBottom: '1.5rem',
-              marginTop: 0,
-              fontFamily: 'Outfit, sans-serif',
-              color: '#FFD700',
+            <div style={{
+              flex: '0 0 180px',
+              borderRadius: '0.8rem',
+              overflow: 'hidden',
+              border: '6px solid #FFD700',
+              animation: visibleSections.has('about') ? 'slideInFromLeft 0.8s ease-out 0.1s both' : 'none',
+              minWidth: '180px',
             }}>
-              Hi, I'm Amirul Khoo
-            </h2>
-            <p style={{
-              fontSize: '1.2rem',
-              lineHeight: 1.8,
-              marginBottom: '1.5rem',
-              color: '#ffffff',
+              <img src="/amirulam.webp" alt="Amirul Khoo" style={{ width: '100%', height: 'auto', display: 'block' }} />
+            </div>
+            
+            <div style={{
+              flex: 1,
+              minWidth: '0',
+              animation: visibleSections.has('about') ? 'slideInFromRight 0.8s ease-out 0.2s both' : 'none',
             }}>
-              I don't train for the mirror.
-            </p>
-            <p style={{
-              fontSize: '1rem',
-              lineHeight: 1.8,
-              color: '#cccccc',
-              marginBottom: 0,
-            }}>
-              I train for real life. Carrying groceries. Playing with your kids. Standing tall after 10 hours at a desk.
-            </p>
+              <p style={{
+                fontSize: '1.2rem',
+                lineHeight: 1.8,
+                marginBottom: '1.5rem',
+                marginTop: 0,
+                color: '#ffffff',
+              }}>
+                I don't train for the mirror.
+              </p>
+              <p style={{
+                fontSize: '1rem',
+                lineHeight: 1.8,
+                color: '#cccccc',
+                marginBottom: 0,
+              }}>
+                I train for real life. Carrying groceries. Playing with your kids. Standing tall after 10 hours at a desk.
+              </p>
+            </div>
           </div>
         </div>
       </section>
@@ -432,7 +438,7 @@ export default function Home() {
       }}>
         <div style={{ maxWidth: '1000px', margin: '0 auto' }}>
           <p style={{
-            fontSize: 'clamp(1.3rem, 4vw, 2.2rem)',
+            fontSize: 'clamp(2rem, 6vw, 3.2rem)',
             fontWeight: 800,
             margin: 0,
             fontFamily: 'Outfit, sans-serif',
@@ -447,7 +453,7 @@ export default function Home() {
 
       {/* WHO I WORK WITH */}
       <section id="who-work" data-animate style={{
-        backgroundColor: '#FFD700',
+        backgroundColor: '#2a2a2a',
         color: '#1a1a1a',
         padding: '3rem 1.5rem',
         opacity: visibleSections.has('who-work') ? 1 : 0,
@@ -460,13 +466,14 @@ export default function Home() {
           marginTop: 0,
           marginBottom: '2.5rem',
           fontFamily: 'Outfit, sans-serif',
+          color: '#FFD700',
         }}>
           Who I Work With
         </h2>
 
         <div style={{
           display: 'grid',
-          gridTemplateColumns: 'repeat(auto-fit, minmax(280px, 1fr))',
+          gridTemplateColumns: 'repeat(2, 1fr)',
           gap: '1.5rem',
           maxWidth: '1200px',
           margin: '0 auto',
@@ -484,14 +491,14 @@ export default function Home() {
             <div
               key={idx}
               style={{
-                backgroundColor: '#1a1a1a',
-                color: '#ffffff',
+                backgroundColor: '#FFD700',
+                color: '#1a1a1a',
                 padding: '2rem',
                 borderRadius: '0.8rem',
                 textAlign: 'center',
                 fontWeight: 600,
                 fontSize: '1rem',
-                boxShadow: '0 8px 24px rgba(255, 255, 255, 0.2)',
+                boxShadow: '0 12px 32px rgba(255, 255, 255, 0.2)',
                 animation: visibleSections.has('who-work') ? `scaleIn 0.5s ease-out ${idx * 0.06}s forwards` : 'none',
                 opacity: visibleSections.has('who-work') ? 1 : 0,
               }}
