@@ -68,10 +68,15 @@ export default function Home() {
   };
 
   return (
-    <div style={{ backgroundColor: '#ffffff', color: '#1a1a1a' }}>
+    <div style={{ backgroundColor: '#1a1a1a', color: '#ffffff' }}>
       <style>{`
         @import url('https://fonts.googleapis.com/css2?family=Outfit:wght@400;600;700;800&family=Poppins:wght@600;700;800&display=swap');
         @import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css');
+
+        body, html {
+          margin: 0;
+          padding: 0;
+        }
 
         * {
           font-family: 'Liberation Mono', monospace;
@@ -420,7 +425,7 @@ export default function Home() {
                 I train for real life.
               </p>
               <p style={{ margin: '0.5rem 0', color: '#cccccc' }}>
-                Carrying groceries. Playing with your kids. Standing tall after 10 hours at a desk.
+                Carrying groceries. Playing with my family. Standing tall after 10 hours at a desk.
               </p>
             </div>
           </div>
