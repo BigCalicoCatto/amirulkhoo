@@ -4,7 +4,7 @@ import { useState, useEffect, useRef } from 'react';
 
 export default function Home() {
   const [heroOpacity, setHeroOpacity] = useState(1);
-  const [heroTextVisible, setHeroTextVisible] = useState(false);
+  const [heroTextVisible, setHeroTextVisible] = useState(true);
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const [visibleSections, setVisibleSections] = useState<Set<string>>(new Set());
   const carouselRef = useRef<HTMLDivElement>(null);
@@ -45,10 +45,6 @@ export default function Home() {
       setMobileMenuOpen(false);
     }
   };
-
-  useEffect(() => {
-    setHeroTextVisible(true);
-  }, []);
 
   useEffect(() => {
     const handleScroll = () => {
@@ -322,6 +318,7 @@ export default function Home() {
           zIndex: 10,
           opacity: heroTextVisible ? 1 : 0,
           animation: heroTextVisible ? 'fadeInUp 0.8s ease-out' : 'none',
+          transition: heroTextVisible ? 'none' : 'opacity 0s',
         }}>
           <h1 style={{
             fontSize: 'clamp(2.5rem, 10vw, 5rem)',
