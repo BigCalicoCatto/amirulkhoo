@@ -316,9 +316,6 @@ export default function Home() {
           textAlign: 'center',
           color: '#ffffff',
           zIndex: 10,
-          opacity: heroTextVisible ? 1 : 0,
-          animation: heroTextVisible ? 'fadeInUp 0.8s ease-out' : 'none',
-          transition: heroTextVisible ? 'none' : 'opacity 0s',
         }}>
           <h1 style={{
             fontSize: 'clamp(2.5rem, 10vw, 5rem)',
@@ -514,40 +511,31 @@ export default function Home() {
         </div>
       </section>
 
-      {/* MOTTO SECTION 1 */}
-      <section style={{
-        backgroundColor: '#FFD700',
-        color: '#ffffff',
-        padding: '2.5rem 1.5rem',
-        textAlign: 'center',
-      }}>
-        <div style={{ maxWidth: '1000px', margin: '0 auto' }}>
-          <p style={{
-            fontSize: 'clamp(1.3rem, 4vw, 2rem)',
-            fontWeight: 800,
-            margin: 0,
-            fontFamily: 'Outfit, sans-serif',
-            lineHeight: 1.3,
-          }}>
-            Let's develop real strength and it starts with showing up.
-          </p>
-        </div>
-      </section>
-
-      {/* MOTTO SECTION 2 */}
+      {/* MOTTO SECTIONS */}
       <section style={{
         backgroundColor: '#FFD700',
         color: '#1a1a1a',
-        padding: '2.5rem 1.5rem',
+        padding: '3rem 1.5rem',
         textAlign: 'center',
       }}>
         <div style={{ maxWidth: '1000px', margin: '0 auto' }}>
           <p style={{
             fontSize: 'clamp(1.3rem, 4vw, 2rem)',
             fontWeight: 800,
+            margin: '0 0 1.5rem 0',
+            fontFamily: 'Outfit, sans-serif',
+            lineHeight: 1.3,
+            color: '#ffffff',
+          }}>
+            Let's develop real strength and it starts with showing up.
+          </p>
+          <p style={{
+            fontSize: 'clamp(1.3rem, 4vw, 2rem)',
+            fontWeight: 800,
             margin: 0,
             fontFamily: 'Outfit, sans-serif',
             lineHeight: 1.3,
+            color: '#1a1a1a',
           }}>
             This is your first step.
           </p>
@@ -556,7 +544,7 @@ export default function Home() {
 
       {/* TESTIMONIALS */}
       <section id="testimonials" data-animate style={{
-        backgroundColor: '#ffffff',
+        backgroundColor: '#2a2a2a',
         padding: '3rem 1.5rem',
         opacity: visibleSections.has('testimonials') ? 1 : 0,
         transition: 'opacity 0.6s ease-out',
@@ -567,7 +555,7 @@ export default function Home() {
           fontWeight: 800,
           marginTop: 0,
           marginBottom: '2.5rem',
-          color: '#1a1a1a',
+          color: '#FFD700',
           fontFamily: 'Outfit, sans-serif',
         }}>
           What My Clients Say
@@ -597,7 +585,7 @@ export default function Home() {
             <div
               key={idx}
               style={{
-                backgroundColor: '#f5f5f5',
+                backgroundColor: '#1a1a1a',
                 padding: '2rem',
                 borderRadius: '0.8rem',
                 borderLeft: '4px solid #FFD700',
@@ -608,7 +596,7 @@ export default function Home() {
               <p style={{
                 fontSize: '1rem',
                 lineHeight: 1.8,
-                color: '#1a1a1a',
+                color: '#ffffff',
                 fontStyle: 'italic',
                 margin: '0 0 1.5rem 0',
               }}>
