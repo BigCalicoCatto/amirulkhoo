@@ -371,25 +371,26 @@ export default function Home() {
       }}>
         <div style={{
           display: 'flex',
-          gap: '2rem',
+          gap: '1.5rem',
           alignItems: 'flex-start',
-          flexWrap: 'wrap',
+          flexWrap: 'nowrap',
           maxWidth: '1200px',
           margin: '0 auto',
         }}>
           <div style={{
-            flex: '0 1 300px',
+            flex: '0 0 180px',
             borderRadius: '0.8rem',
             overflow: 'hidden',
             border: '6px solid #FFD700',
             animation: visibleSections.has('about') ? 'slideInFromLeft 0.8s ease-out' : 'none',
+            minWidth: '180px',
           }}>
             <img src="/amirulam.webp" alt="Amirul Khoo" style={{ width: '100%', height: 'auto', display: 'block' }} />
           </div>
           
           <div style={{
             flex: 1,
-            minWidth: '300px',
+            minWidth: '0',
             animation: visibleSections.has('about') ? 'slideInFromRight 0.8s ease-out 0.2s both' : 'none',
           }}>
             <h2 style={{
@@ -808,17 +809,17 @@ export default function Home() {
         <div style={{
           display: 'flex',
           gap: '2rem',
-          flexWrap: 'wrap',
+          flexWrap: 'nowrap',
           alignItems: 'flex-start',
           maxWidth: '1200px',
           margin: '0 auto',
           animation: 'slideInFromLeft 0.6s ease-out',
         }}>
           <div style={{
-            flex: '0 0 auto',
-            width: '160px',
+            flex: '0 0 160px',
             borderRadius: '0.8rem',
             overflow: 'hidden',
+            minWidth: '160px',
           }}>
             <img src="/amirulam.webp" alt="Amirul Khoo" style={{ width: '100%', height: 'auto', display: 'block' }} />
           </div>
