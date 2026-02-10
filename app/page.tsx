@@ -514,91 +514,40 @@ export default function Home() {
         </div>
       </section>
 
-      {/* STATISTICS SECTION */}
+      {/* MOTTO SECTION 1 */}
       <section style={{
-        backgroundColor: '#2a2a2a',
+        backgroundColor: '#FFD700',
         color: '#ffffff',
-        padding: '4rem 1.5rem',
+        padding: '2.5rem 1.5rem',
         textAlign: 'center',
       }}>
-        <div style={{
-          maxWidth: '1000px',
-          margin: '0 auto',
-        }}>
-          <h2 style={{
-            fontSize: 'clamp(2rem, 6vw, 3.5rem)',
-            fontWeight: 800,
-            margin: '0 0 3rem 0',
-            fontFamily: 'Outfit, sans-serif',
-            color: '#FFD700',
-          }}>
-            187 clients • 5 years • 1 promise
-          </h2>
-
-          <div style={{
-            display: 'grid',
-            gridTemplateColumns: 'repeat(auto-fit, minmax(200px, 1fr))',
-            gap: '2rem',
-            marginBottom: '3rem',
-          }}>
-            <div>
-              <p style={{
-                fontSize: '3rem',
-                fontWeight: 800,
-                margin: '0 0 0.5rem 0',
-                color: '#FFD700',
-                fontFamily: 'Outfit, sans-serif',
-              }}>
-                187
-              </p>
-              <p style={{ fontSize: '1.1rem', margin: 0, color: '#cccccc' }}>
-                Clients Trained
-              </p>
-            </div>
-            <div>
-              <p style={{
-                fontSize: '3rem',
-                fontWeight: 800,
-                margin: '0 0 0.5rem 0',
-                color: '#FFD700',
-                fontFamily: 'Outfit, sans-serif',
-              }}>
-                5+
-              </p>
-              <p style={{ fontSize: '1.1rem', margin: 0, color: '#cccccc' }}>
-                Years Experience
-              </p>
-            </div>
-            <div>
-              <p style={{
-                fontSize: '3rem',
-                fontWeight: 800,
-                margin: '0 0 0.5rem 0',
-                color: '#FFD700',
-                fontFamily: 'Outfit, sans-serif',
-              }}>
-                100%
-              </p>
-              <p style={{ fontSize: '1.1rem', margin: 0, color: '#cccccc' }}>
-                Commitment
-              </p>
-            </div>
-          </div>
-
+        <div style={{ maxWidth: '1000px', margin: '0 auto' }}>
           <p style={{
-            fontSize: '1.3rem',
-            lineHeight: 1.6,
-            color: '#ffffff',
-            marginBottom: '1rem',
-            fontWeight: 600,
+            fontSize: 'clamp(1.3rem, 4vw, 2rem)',
+            fontWeight: 800,
+            margin: 0,
+            fontFamily: 'Outfit, sans-serif',
+            lineHeight: 1.3,
           }}>
             Let's develop real strength and it starts with showing up.
           </p>
+        </div>
+      </section>
+
+      {/* MOTTO SECTION 2 */}
+      <section style={{
+        backgroundColor: '#FFD700',
+        color: '#1a1a1a',
+        padding: '2.5rem 1.5rem',
+        textAlign: 'center',
+      }}>
+        <div style={{ maxWidth: '1000px', margin: '0 auto' }}>
           <p style={{
-            fontSize: '1.1rem',
-            color: '#FFD700',
+            fontSize: 'clamp(1.3rem, 4vw, 2rem)',
+            fontWeight: 800,
             margin: 0,
-            fontWeight: 700,
+            fontFamily: 'Outfit, sans-serif',
+            lineHeight: 1.3,
           }}>
             This is your first step.
           </p>
