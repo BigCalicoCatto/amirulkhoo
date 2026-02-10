@@ -389,7 +389,6 @@ export default function Home() {
             display: 'flex',
             gap: '1.5rem',
             alignItems: 'flex-start',
-            flexWrap: 'nowrap',
           }}>
             <div style={{
               flex: '0 0 180px',
@@ -406,23 +405,17 @@ export default function Home() {
               flex: 1,
               minWidth: '0',
               animation: visibleSections.has('about') ? 'slideInFromRight 0.8s ease-out 0.2s both' : 'none',
+              lineHeight: 1.7,
+              fontSize: '0.95rem',
             }}>
-              <p style={{
-                fontSize: '1.2rem',
-                lineHeight: 1.8,
-                marginBottom: '1.5rem',
-                marginTop: 0,
-                color: '#ffffff',
-              }}>
+              <p style={{ margin: '0.5rem 0', fontWeight: 600, color: '#FFD700' }}>
                 I don't train for the mirror.
               </p>
-              <p style={{
-                fontSize: '1rem',
-                lineHeight: 1.8,
-                color: '#cccccc',
-                marginBottom: 0,
-              }}>
-                I train for real life. Carrying groceries. Playing with your kids. Standing tall after 10 hours at a desk.
+              <p style={{ margin: '0.5rem 0', color: '#cccccc' }}>
+                I train for real life.
+              </p>
+              <p style={{ margin: '0.5rem 0', color: '#cccccc' }}>
+                Carrying groceries. Playing with your kids. Standing tall after 10 hours at a desk.
               </p>
             </div>
           </div>
@@ -493,14 +486,19 @@ export default function Home() {
               style={{
                 backgroundColor: '#FFD700',
                 color: '#1a1a1a',
-                padding: '2rem',
+                padding: '1.2rem',
                 borderRadius: '0.8rem',
                 textAlign: 'center',
                 fontWeight: 600,
-                fontSize: '1rem',
+                fontSize: '0.95rem',
                 boxShadow: '0 12px 32px rgba(255, 255, 255, 0.2)',
                 animation: visibleSections.has('who-work') ? `scaleIn 0.5s ease-out ${idx * 0.06}s forwards` : 'none',
                 opacity: visibleSections.has('who-work') ? 1 : 0,
+                height: '100px',
+                display: 'flex',
+                alignItems: 'center',
+                justifyContent: 'center',
+                lineHeight: 1.4,
               }}
             >
               {item}
