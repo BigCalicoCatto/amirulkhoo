@@ -699,7 +699,6 @@ export default function Home() {
           overflowX: 'auto',
           paddingBottom: '1rem',
           scrollBehavior: 'smooth',
-          ref: carouselRef,
         }} ref={carouselRef} className="carousel">
           {[
             {
