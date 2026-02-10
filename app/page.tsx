@@ -376,7 +376,7 @@ export default function Home() {
           <h2 style={{
             fontSize: '2.2rem',
             fontWeight: 800,
-            marginBottom: '1.5rem',
+            marginBottom: '1rem',
             marginTop: 0,
             fontFamily: 'Outfit, sans-serif',
             color: '#FFD700',
@@ -384,6 +384,18 @@ export default function Home() {
           }}>
             Hi, I'm Amirul Khoo
           </h2>
+
+          <p style={{
+            fontSize: '1rem',
+            lineHeight: 1.6,
+            marginBottom: '1.5rem',
+            marginTop: 0,
+            color: '#FFD700',
+            fontWeight: 600,
+            animation: visibleSections.has('about') ? 'slideInFromLeft 0.8s ease-out 0.05s both' : 'none',
+          }}>
+            I don't train for the mirror.
+          </p>
 
           <div style={{
             display: 'flex',
@@ -408,9 +420,6 @@ export default function Home() {
               lineHeight: 1.7,
               fontSize: '0.95rem',
             }}>
-              <p style={{ margin: '0.5rem 0', fontWeight: 600, color: '#FFD700' }}>
-                I don't train for the mirror.
-              </p>
               <p style={{ margin: '0.5rem 0', color: '#cccccc' }}>
                 I train for real life.
               </p>
