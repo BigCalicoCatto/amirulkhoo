@@ -586,7 +586,7 @@ export default function Home() {
               key={idx}
               style={{
                 backgroundColor: '#1a1a1a',
-                padding: '2rem',
+                padding: '1.5rem',
                 borderRadius: '0.8rem',
                 borderLeft: '4px solid #FFD700',
                 animation: visibleSections.has('testimonials') ? `fadeInUp 0.6s ease-out ${idx * 0.1}s forwards` : 'none',
@@ -594,16 +594,16 @@ export default function Home() {
               }}
             >
               <p style={{
-                fontSize: '1rem',
-                lineHeight: 1.8,
+                fontSize: '0.9rem',
+                lineHeight: 1.5,
                 color: '#ffffff',
                 fontStyle: 'italic',
-                margin: '0 0 1.5rem 0',
+                margin: '0 0 1rem 0',
               }}>
                 "{testimonial.quote}"
               </p>
               <p style={{
-                fontSize: '0.95rem',
+                fontSize: '0.85rem',
                 fontWeight: 700,
                 color: '#FFD700',
                 margin: 0,
@@ -628,20 +628,12 @@ export default function Home() {
           fontSize: '2.2rem',
           fontWeight: 800,
           marginTop: 0,
-          marginBottom: '0.5rem',
+          marginBottom: '2.5rem',
           color: '#FFD700',
           fontFamily: 'Outfit, sans-serif',
         }}>
           What I Offer
         </h2>
-        <p style={{
-          textAlign: 'center',
-          fontSize: '1.1rem',
-          color: '#cccccc',
-          marginBottom: '2.5rem',
-        }}>
-          No fancy machines. No confusing plans. Just strength that works where it matters.
-        </p>
 
         <div style={{
           display: 'flex',
@@ -740,7 +732,43 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Premium Line */}
+      {/* MOTTO SECTION - NO FANCY MACHINES */}
+      <section style={{
+        backgroundColor: '#FFD700',
+        color: '#1a1a1a',
+        padding: '3rem 1.5rem',
+        textAlign: 'center',
+      }}>
+        <div style={{ maxWidth: '1000px', margin: '0 auto' }}>
+          <p style={{
+            fontSize: 'clamp(1.3rem, 4vw, 2rem)',
+            fontWeight: 800,
+            margin: '0.5rem 0',
+            fontFamily: 'Outfit, sans-serif',
+            lineHeight: 1.3,
+          }}>
+            No fancy machines.
+          </p>
+          <p style={{
+            fontSize: 'clamp(1.3rem, 4vw, 2rem)',
+            fontWeight: 800,
+            margin: '0.5rem 0',
+            fontFamily: 'Outfit, sans-serif',
+            lineHeight: 1.3,
+          }}>
+            No confusing plans.
+          </p>
+          <p style={{
+            fontSize: 'clamp(1.3rem, 4vw, 2rem)',
+            fontWeight: 800,
+            margin: '0.5rem 0',
+            fontFamily: 'Outfit, sans-serif',
+            lineHeight: 1.3,
+          }}>
+            Just strength that works where it matters.
+          </p>
+        </div>
+      </section>
       <div style={{
         height: '2px',
         backgroundColor: '#FFD700',
@@ -751,7 +779,7 @@ export default function Home() {
       {/* CTA */}
       <section id="cta" data-animate style={{
         padding: '3rem 1.5rem',
-        backgroundColor: '#f5f5f5',
+        backgroundColor: '#2a2a2a',
         opacity: visibleSections.has('cta') ? 1 : 0,
         transition: 'opacity 0.6s ease-out',
       }}>
@@ -778,7 +806,7 @@ export default function Home() {
               fontWeight: 800,
               marginBottom: '1rem',
               marginTop: 0,
-              color: '#1a1a1a',
+              color: '#FFD700',
               fontFamily: 'Outfit, sans-serif',
               lineHeight: 1.2,
             }}>
@@ -794,7 +822,7 @@ export default function Home() {
             </p>
             <p style={{
               fontSize: '1rem',
-              color: '#666',
+              color: '#cccccc',
               margin: 0,
               lineHeight: 1.6,
             }}>
@@ -806,7 +834,7 @@ export default function Home() {
         </div>
 
         <div style={{ marginTop: '2rem', maxWidth: '1200px', margin: '2rem auto 0' }}>
-          <p style={{ fontSize: '0.95rem', marginBottom: '1.5rem', lineHeight: 1.6, color: '#1a1a1a' }}>
+          <p style={{ fontSize: '0.95rem', marginBottom: '1.5rem', lineHeight: 1.6, color: '#cccccc' }}>
             Book your free session today.
           </p>
           <div style={{ display: 'flex', flexDirection: 'column', gap: '0.8rem' }}>
@@ -836,9 +864,7 @@ export default function Home() {
                 e.currentTarget.style.boxShadow = 'none';
               }}
             >
-              <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
-                <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.272-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.67-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.076 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421-7.403h-.004a9.87 9.87 0 00-4.969 1.523A9.937 9.937 0 002.121 12a9.935 9.935 0 001.52 4.977A9.87 9.87 0 008.07 19.88h.004c2.46 0 4.709-.822 6.552-2.36.306-.272.603-.56.889-.862-3.982-.424-7.126-3.86-7.126-7.658 0-3.798 3.144-7.234 7.126-7.658-.286-.302-.583-.59-.889-.862-1.843-1.538-4.092-2.36-6.552-2.36z"/>
-              </svg>
+              <i className="fab fa-whatsapp"></i>
               WhatsApp
             </a>
             <a
@@ -867,9 +893,7 @@ export default function Home() {
                 e.currentTarget.style.boxShadow = 'none';
               }}
             >
-              <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
-                <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.057-1.645.069-4.849.069-3.204 0-3.584-.012-4.849-.069-3.259-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073z"/>
-              </svg>
+              <i className="fab fa-instagram"></i>
               Instagram
             </a>
             <a
@@ -898,9 +922,7 @@ export default function Home() {
                 e.currentTarget.style.boxShadow = 'none';
               }}
             >
-              <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
-                <path d="M19.321 5.562a5.122 5.122 0 01-2.996-2.965A5.408 5.408 0 0012.4 1c-3.003 0-5.544 2.563-5.544 5.622 0 .442.052.872.144 1.287-2.324-.12-4.657-1.213-6.234-2.966C-.243 2.97-.604 3.956.247 4.721c.852.765 2.397 1.201 3.942 1.201.63 0 1.248-.084 1.846-.252v1.004c0 3.059 2.54 5.622 5.544 5.622 1.46 0 2.81-.559 3.777-1.468.897.059 1.799.237 2.664.527.643-2.084-.494-3.959-2.211-4.88 1.031-.169 1.99-.427 2.872-.766z"/>
-              </svg>
+              <i className="fab fa-tiktok"></i>
               TikTok
             </a>
           </div>
