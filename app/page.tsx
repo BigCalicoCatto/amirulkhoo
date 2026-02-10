@@ -4,7 +4,6 @@ import { useState, useEffect, useRef } from 'react';
 
 export default function Home() {
   const [heroOpacity, setHeroOpacity] = useState(1);
-  const [heroTextVisible, setHeroTextVisible] = useState(true);
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const [visibleSections, setVisibleSections] = useState<Set<string>>(new Set());
   const carouselRef = useRef<HTMLDivElement>(null);
@@ -784,52 +783,59 @@ export default function Home() {
         transition: 'opacity 0.6s ease-out',
       }}>
         <div style={{
-          display: 'flex',
-          gap: '2rem',
-          flexWrap: 'nowrap',
-          alignItems: 'flex-start',
           maxWidth: '1200px',
           margin: '0 auto',
-          animation: 'slideInFromLeft 0.6s ease-out',
         }}>
-          <div style={{
-            flex: '0 0 160px',
-            borderRadius: '0.8rem',
-            overflow: 'hidden',
-            minWidth: '160px',
+          <h2 style={{
+            fontSize: '2.2rem',
+            fontWeight: 800,
+            marginBottom: '0.5rem',
+            marginTop: 0,
+            color: '#FFD700',
+            fontFamily: 'Outfit, sans-serif',
+            animation: 'slideInFromLeft 0.6s ease-out',
           }}>
-            <img src="/amirulam.webp" alt="Amirul Khoo" style={{ width: '100%', height: 'auto', display: 'block' }} />
-          </div>
-          <div style={{ flex: 1, minWidth: '0' }}>
-            <h2 style={{
-              fontSize: '2rem',
-              fontWeight: 800,
-              marginBottom: '1rem',
-              marginTop: 0,
-              color: '#FFD700',
-              fontFamily: 'Outfit, sans-serif',
-              lineHeight: 1.2,
+            Let's unleash your inner strength.
+          </h2>
+
+          <p style={{
+            fontSize: '1.2rem',
+            fontWeight: 600,
+            color: '#FFD700',
+            margin: '0 0 2rem 0',
+            animation: 'slideInFromLeft 0.6s ease-out 0.1s both',
+          }}>
+            Strength that actually matters.
+          </p>
+
+          <div style={{
+            display: 'flex',
+            gap: '2rem',
+            flexWrap: 'nowrap',
+            alignItems: 'flex-start',
+            animation: 'slideInFromLeft 0.6s ease-out',
+            marginBottom: '2rem',
+          }}>
+            <div style={{
+              flex: '0 0 160px',
+              borderRadius: '0.8rem',
+              overflow: 'hidden',
+              minWidth: '160px',
             }}>
-              Let's unleash your inner strength.
-            </h2>
-            <p style={{
-              fontSize: '1.2rem',
-              fontWeight: 600,
-              color: '#FFD700',
-              margin: '0 0 0.5rem 0',
-            }}>
-              Strength that actually matters.
-            </p>
-            <p style={{
-              fontSize: '1rem',
-              color: '#cccccc',
-              margin: 0,
-              lineHeight: 1.6,
-            }}>
-              Your work, your family, your life.
-              <br />
-              Your first step. STARTS NOW.
-            </p>
+              <img src="/amirulam.webp" alt="Amirul Khoo" style={{ width: '100%', height: 'auto', display: 'block' }} />
+            </div>
+            <div style={{ flex: 1, minWidth: '0' }}>
+              <p style={{
+                fontSize: '1rem',
+                color: '#cccccc',
+                margin: 0,
+                lineHeight: 1.6,
+              }}>
+                Your work, your family, your life.
+                <br />
+                Your first step. STARTS NOW.
+              </p>
+            </div>
           </div>
         </div>
 
