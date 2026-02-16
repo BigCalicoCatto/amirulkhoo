@@ -484,21 +484,6 @@ export default function Home() {
         textAlign: 'center',
       }}>
         <div style={{ maxWidth: '1000px', margin: '0 auto' }}>
-          {/* Top Dumbbell Icons */}
-          <div style={{
-            fontSize: '1.8rem',
-            marginBottom: '1.5rem',
-            letterSpacing: '0.5rem',
-            display: 'flex',
-            justifyContent: 'center',
-            alignItems: 'center',
-            gap: '0.3rem',
-          }}>
-            <i className="fas fa-dumbbell" style={{ color: '#1a1a1a' }}></i>
-            <i className="fas fa-dumbbell" style={{ color: '#1a1a1a' }}></i>
-            <i className="fas fa-dumbbell" style={{ color: '#1a1a1a' }}></i>
-          </div>
-
           {/* Thick Black Divider - TOP */}
           <div style={{
             width: '100%',
@@ -528,21 +513,6 @@ export default function Home() {
             backgroundColor: '#1a1a1a',
             margin: '1.5rem 0 1.5rem 0',
           }}></div>
-
-          {/* Bottom Dumbbell Icons */}
-          <div style={{
-            fontSize: '1.8rem',
-            marginTop: '1.5rem',
-            letterSpacing: '0.5rem',
-            display: 'flex',
-            justifyContent: 'center',
-            alignItems: 'center',
-            gap: '0.3rem',
-          }}>
-            <i className="fas fa-dumbbell" style={{ color: '#1a1a1a' }}></i>
-            <i className="fas fa-dumbbell" style={{ color: '#1a1a1a' }}></i>
-            <i className="fas fa-dumbbell" style={{ color: '#1a1a1a' }}></i>
-          </div>
         </div>
       </section>
 
@@ -604,17 +574,7 @@ export default function Home() {
               }}
             >
               {/* Dumbbell Icon Stamp */}
-              <div style={{
-                position: 'absolute',
-                top: '-10px',
-                left: '12px',
-                fontSize: '1.8rem',
-                color: '#1a1a1a',
-                flexShrink: 0,
-              }}>
-                <i className="fas fa-dumbbell"></i>
-              </div>
-              <span style={{ marginLeft: '0.5rem' }}>{item}</span>
+              <span style={{ marginLeft: '0rem' }}>{item}</span>
             </div>
           ))}
         </div>
@@ -628,21 +588,6 @@ export default function Home() {
         textAlign: 'center',
       }}>
         <div style={{ maxWidth: '1000px', margin: '0 auto' }}>
-          {/* Top Dumbbell Icons */}
-          <div style={{
-            fontSize: '1.8rem',
-            marginBottom: '1.5rem',
-            letterSpacing: '0.5rem',
-            display: 'flex',
-            justifyContent: 'center',
-            alignItems: 'center',
-            gap: '0.3rem',
-          }}>
-            <i className="fas fa-dumbbell" style={{ color: '#1a1a1a' }}></i>
-            <i className="fas fa-dumbbell" style={{ color: '#1a1a1a' }}></i>
-            <i className="fas fa-dumbbell" style={{ color: '#1a1a1a' }}></i>
-          </div>
-
           {/* Thick Black Divider - TOP */}
           <div style={{
             width: '100%',
@@ -684,21 +629,6 @@ export default function Home() {
           }}>
             This is your first step.
           </p>
-
-          {/* Bottom Dumbbell Icons */}
-          <div style={{
-            fontSize: '1.8rem',
-            marginTop: '1.5rem',
-            letterSpacing: '0.5rem',
-            display: 'flex',
-            justifyContent: 'center',
-            alignItems: 'center',
-            gap: '0.3rem',
-          }}>
-            <i className="fas fa-dumbbell" style={{ color: '#1a1a1a' }}></i>
-            <i className="fas fa-dumbbell" style={{ color: '#1a1a1a' }}></i>
-            <i className="fas fa-dumbbell" style={{ color: '#1a1a1a' }}></i>
-          </div>
         </div>
       </section>
 
