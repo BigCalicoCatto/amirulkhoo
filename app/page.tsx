@@ -266,26 +266,26 @@ export default function Home() {
             <i className="fab fa-tiktok"></i>
           </a>
         
-          {/* Hamburger Button */}
-          <button
-            id="hamburger-menu"
-            onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
-            style={{
-              background: 'none',
-              border: 'none',
-              cursor: 'pointer',
-              display: 'flex',
-              flexDirection: 'column',
-              gap: '5px',
-              padding: '0.5rem',
-              transition: 'transform 0.3s ease',
-              transform: mobileMenuOpen ? 'rotate(90deg)' : 'rotate(0deg)',
-            }}
-          >
-            <span style={{ width: '25px', height: '3px', backgroundColor: '#ffffff', display: 'block' }}></span>
-            <span style={{ width: '25px', height: '3px', backgroundColor: '#ffffff', display: 'block' }}></span>
-            <span style={{ width: '25px', height: '3px', backgroundColor: '#ffffff', display: 'block' }}></span>
-          </button>
+        {/* Hamburger Button */}
+        <button
+          id="hamburger-menu"
+          onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
+          style={{
+            background: 'none',
+            border: 'none',
+            cursor: 'pointer',
+            display: 'flex',
+            flexDirection: 'column',
+            gap: '5px',
+            padding: '0.5rem',
+            transition: 'transform 0.3s ease',
+            transform: mobileMenuOpen ? 'rotate(90deg)' : 'rotate(0deg)',
+          }}
+        >
+          <span style={{ width: '25px', height: '3px', backgroundColor: '#ffffff', display: 'block' }}></span>
+          <span style={{ width: '25px', height: '3px', backgroundColor: '#ffffff', display: 'block' }}></span>
+          <span style={{ width: '25px', height: '3px', backgroundColor: '#ffffff', display: 'block' }}></span>
+        </button>
         </div>
 
         {/* Mobile Menu */}
@@ -1017,7 +1017,7 @@ export default function Home() {
             Book your free session today.
           </p>
           <div style={{ display: 'flex', flexDirection: 'column', gap: '0.8rem' }}>
-            
+            <a
               href="#"
               style={{
                 display: 'flex',
@@ -1046,7 +1046,7 @@ export default function Home() {
               <i className="fab fa-whatsapp"></i>
               WhatsApp
             </a>
-            
+            <a
               href="#"
               style={{
                 display: 'flex',
@@ -1075,7 +1075,7 @@ export default function Home() {
               <i className="fab fa-instagram"></i>
               Instagram
             </a>
-            
+            <a
               href="#"
               style={{
                 display: 'flex',
