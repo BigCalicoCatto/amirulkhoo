@@ -725,31 +725,34 @@ export default function Home() {
           What I Offer
         </h2>
 
-        {/* Tab Navigation */}
+        {/* Tab Navigation - Slider Style */}
         <div style={{
           display: 'flex',
-          gap: '1rem',
+          gap: '0.5rem',
           justifyContent: 'center',
           marginBottom: '2rem',
-          flexWrap: 'wrap',
-          maxWidth: '1200px',
-          margin: '0 auto 2rem auto',
+          flexWrap: 'nowrap',
+          overflowX: 'auto',
+          maxWidth: '100%',
+          paddingBottom: '0.5rem',
         }}>
           {offers.map((offer, idx) => (
             <button
               key={idx}
               onClick={() => setActiveTab(idx)}
               style={{
-                padding: '0.75rem 1.5rem',
+                padding: '0.75rem 1rem',
                 backgroundColor: activeTab === idx ? '#FFD700' : 'transparent',
                 color: activeTab === idx ? '#1a1a1a' : '#FFD700',
                 border: '2px solid #FFD700',
                 borderRadius: '0.6rem',
                 fontWeight: 700,
-                fontSize: '0.95rem',
+                fontSize: '0.85rem',
                 cursor: 'pointer',
                 transition: 'all 0.3s ease',
                 fontFamily: 'Outfit, sans-serif',
+                whiteSpace: 'nowrap',
+                flex: '0 0 auto',
               }}
               onMouseEnter={(e) => {
                 if (activeTab !== idx) {
@@ -769,7 +772,7 @@ export default function Home() {
 
         {/* Tab Content - Single Card Slider */}
         <div style={{
-          maxWidth: '400px',
+          maxWidth: '90%',
           margin: '0 auto',
           display: 'flex',
           alignItems: 'center',
