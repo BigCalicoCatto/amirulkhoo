@@ -156,6 +156,17 @@ export default function Home() {
           }
         }
 
+        @keyframes fadeOutDown {
+          from {
+            opacity: 1;
+            transform: translateY(0);
+          }
+          to {
+            opacity: 0;
+            transform: translateY(30px);
+          }
+        }
+
         @keyframes slideInFromLeft {
           from {
             opacity: 0;
@@ -243,7 +254,7 @@ export default function Home() {
           AMIRUL KHOO
         </h1>
         
-        {/* Social Icons */}
+        {/* Social Icons + Hamburger Container */}
         <div style={{ display: 'flex', gap: '1.2rem', alignItems: 'center' }}>
           <a href="#" style={{ color: '#FFD700', textDecoration: 'none', display: 'flex', alignItems: 'center', transition: 'opacity 0.3s', fontSize: '1.3rem' }}>
             <i className="fab fa-whatsapp"></i>
@@ -254,7 +265,6 @@ export default function Home() {
           <a href="#" style={{ color: '#FFD700', textDecoration: 'none', display: 'flex', alignItems: 'center', transition: 'opacity 0.3s', fontSize: '1.3rem' }}>
             <i className="fab fa-tiktok"></i>
           </a>
-        </div>
         
         {/* Hamburger Button */}
         <button
@@ -276,6 +286,7 @@ export default function Home() {
           <span style={{ width: '25px', height: '3px', backgroundColor: '#ffffff', display: 'block' }}></span>
           <span style={{ width: '25px', height: '3px', backgroundColor: '#ffffff', display: 'block' }}></span>
         </button>
+        </div>
 
         {/* Mobile Menu */}
         {mobileMenuOpen && (
@@ -488,6 +499,14 @@ export default function Home() {
             <i className="fas fa-dumbbell" style={{ color: '#1a1a1a' }}></i>
           </div>
 
+          {/* Thick Black Divider - TOP */}
+          <div style={{
+            width: '100%',
+            height: '12px',
+            backgroundColor: '#1a1a1a',
+            margin: '0 0 1.5rem 0',
+          }}></div>
+
           {/* Text Content */}
           <p style={{
             fontSize: 'clamp(2rem, 6vw, 3.2rem)',
@@ -502,18 +521,12 @@ export default function Home() {
             Zero ego.
           </p>
 
-          {/* Thick Black Dividers */}
+          {/* Thick Black Divider - BOTTOM */}
           <div style={{
             width: '100%',
             height: '12px',
             backgroundColor: '#1a1a1a',
-            margin: '1.5rem 0',
-          }}></div>
-          <div style={{
-            width: '100%',
-            height: '12px',
-            backgroundColor: '#1a1a1a',
-            margin: '1.5rem 0',
+            margin: '1.5rem 0 1.5rem 0',
           }}></div>
 
           {/* Bottom Dumbbell Icons */}
@@ -575,19 +588,17 @@ export default function Home() {
               style={{
                 backgroundColor: '#FFD700',
                 color: '#1a1a1a',
-                padding: '1rem 1rem 1rem 3rem',
+                padding: '1.2rem',
                 borderRadius: '0.8rem',
-                textAlign: 'center',
                 fontWeight: 600,
                 fontSize: '0.95rem',
                 boxShadow: '0 12px 32px rgba(255, 255, 255, 0.2)',
                 animation: visibleSections.has('who-work') ? `scaleIn 0.5s ease-out ${idx * 0.06}s forwards` : 'none',
                 opacity: visibleSections.has('who-work') ? 1 : 0,
-                height: 'auto',
                 minHeight: '60px',
                 display: 'flex',
                 alignItems: 'center',
-                justifyContent: 'center',
+                justifyContent: 'flex-start',
                 lineHeight: 1.4,
                 position: 'relative',
               }}
@@ -599,10 +610,11 @@ export default function Home() {
                 left: '12px',
                 fontSize: '1.8rem',
                 color: '#1a1a1a',
+                flexShrink: 0,
               }}>
                 <i className="fas fa-dumbbell"></i>
               </div>
-              {item}
+              <span style={{ marginLeft: '0.5rem' }}>{item}</span>
             </div>
           ))}
         </div>
@@ -631,6 +643,14 @@ export default function Home() {
             <i className="fas fa-dumbbell" style={{ color: '#1a1a1a' }}></i>
           </div>
 
+          {/* Thick Black Divider - TOP */}
+          <div style={{
+            width: '100%',
+            height: '12px',
+            backgroundColor: '#1a1a1a',
+            margin: '0 0 1.5rem 0',
+          }}></div>
+
           {/* Text Content */}
           <p style={{
             fontSize: 'clamp(1.5rem, 4vw, 2rem)',
@@ -639,23 +659,17 @@ export default function Home() {
             fontFamily: 'Outfit, sans-serif',
             lineHeight: 1.3,
             marginBottom: '1.5rem',
-            color: '#1a1a1a',
+            color: '#ffffff',
           }}>
             Real strength starts with showing up.
           </p>
 
-          {/* Thick Black Dividers */}
+          {/* Thick Black Divider - BOTTOM */}
           <div style={{
             width: '100%',
             height: '12px',
             backgroundColor: '#1a1a1a',
-            margin: '1.5rem 0',
-          }}></div>
-          <div style={{
-            width: '100%',
-            height: '12px',
-            backgroundColor: '#1a1a1a',
-            margin: '1.5rem 0',
+            margin: '1.5rem 0 1.5rem 0',
           }}></div>
 
           {/* Second Line */}
@@ -823,30 +837,30 @@ export default function Home() {
           ))}
         </div>
 
-        {/* Tab Content - Carousel View */}
+        {/* Tab Content - Single Card Slider */}
         <div style={{
+          maxWidth: '400px',
+          margin: '0 auto',
           display: 'flex',
-          gap: '1.5rem',
-          overflowX: 'auto',
-          paddingBottom: '1rem',
-          scrollBehavior: 'smooth',
-          maxWidth: '100%',
-        }} ref={carouselRef} className="carousel">
+          alignItems: 'center',
+          justifyContent: 'center',
+          minHeight: '400px',
+        }}>
           {offers.map((offer, idx) => (
             <div
               key={idx}
               style={{
-                flex: '0 0 300px',
+                flex: '0 0 100%',
                 backgroundColor: '#2a2a2a',
                 border: '2px solid #FFD700',
                 borderRadius: '0.8rem',
                 padding: '2rem',
                 display: 'flex',
                 flexDirection: 'column',
-                animation: visibleSections.has('offer') ? `scaleIn 0.5s ease-out ${idx * 0.1}s forwards` : 'none',
-                opacity: visibleSections.has('offer') ? 1 : 0,
-                transform: activeTab === idx ? 'scale(1.02)' : 'scale(1)',
-                transition: 'transform 0.3s ease',
+                animation: activeTab === idx ? 'fadeInUp 0.5s ease-out forwards' : 'fadeOutDown 0.3s ease-out forwards',
+                opacity: activeTab === idx ? 1 : 0,
+                pointerEvents: activeTab === idx ? 'auto' : 'none',
+                position: activeTab === idx ? 'relative' : 'absolute',
               }}
             >
               <h3 style={{
