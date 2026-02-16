@@ -6,6 +6,7 @@ export default function Home() {
   const [heroOpacity, setHeroOpacity] = useState(1);
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const [visibleSections, setVisibleSections] = useState<Set<string>>(new Set());
+  const [activeTab, setActiveTab] = useState(0);
   const carouselRef = useRef<HTMLDivElement>(null);
 
   // Intersection Observer for scroll animations
@@ -66,6 +67,42 @@ export default function Home() {
       });
     }
   };
+
+  const offers = [
+    {
+      title: 'Starter Consult',
+      items: [
+        '30-minute movement check',
+        'Find your pain points and goals',
+        'Get a simple home routine',
+        'Zero sales talk'
+      ],
+      price: 'FREE',
+      priceColor: '#FFD700'
+    },
+    {
+      title: 'Small Group',
+      items: [
+        'Max 5 guys',
+        'Build posture, mobility, real strength',
+        'Train outdoors or at a KL gym',
+        'WhatsApp support + form feedback'
+      ],
+      price: 'From RM60/person',
+      priceColor: '#FFD700'
+    },
+    {
+      title: '1-on-1 Coaching',
+      items: [
+        'Custom plan for home, gym, or outdoors',
+        'Programming that respects old injuries',
+        'Weekly check-ins',
+        'Nutrition basics included'
+      ],
+      price: 'From RM120/week',
+      priceColor: '#FFD700'
+    }
+  ];
 
   return (
     <div style={{ backgroundColor: '#ffffff', color: '#1a1a1a' }}>
@@ -208,6 +245,9 @@ export default function Home() {
         
         {/* Social Icons */}
         <div style={{ display: 'flex', gap: '1.2rem', alignItems: 'center' }}>
+          <a href="#" style={{ color: '#FFD700', textDecoration: 'none', display: 'flex', alignItems: 'center', transition: 'opacity 0.3s', fontSize: '1.3rem' }}>
+            <i className="fab fa-whatsapp"></i>
+          </a>
           <a href="#" style={{ color: '#FFD700', textDecoration: 'none', display: 'flex', alignItems: 'center', transition: 'opacity 0.3s', fontSize: '1.3rem' }}>
             <i className="fab fa-instagram"></i>
           </a>
@@ -425,7 +465,7 @@ export default function Home() {
         </div>
       </section>
 
-      {/* POWER MOTTO LINE */}
+      {/* POWER MOTTO LINE - WITH DUMBBELL DESIGN */}
       <section style={{
         backgroundColor: '#FFD700',
         color: '#1a1a1a',
@@ -433,17 +473,63 @@ export default function Home() {
         textAlign: 'center',
       }}>
         <div style={{ maxWidth: '1000px', margin: '0 auto' }}>
+          {/* Top Dumbbell Icons */}
+          <div style={{
+            fontSize: '1.8rem',
+            marginBottom: '1.5rem',
+            letterSpacing: '0.5rem',
+            display: 'flex',
+            justifyContent: 'center',
+            alignItems: 'center',
+            gap: '0.3rem',
+          }}>
+            <i className="fas fa-dumbbell" style={{ color: '#1a1a1a' }}></i>
+            <i className="fas fa-dumbbell" style={{ color: '#1a1a1a' }}></i>
+            <i className="fas fa-dumbbell" style={{ color: '#1a1a1a' }}></i>
+          </div>
+
+          {/* Text Content */}
           <p style={{
             fontSize: 'clamp(2rem, 6vw, 3.2rem)',
             fontWeight: 800,
             margin: 0,
             fontFamily: 'Outfit, sans-serif',
             lineHeight: 1.3,
+            marginBottom: '1.5rem',
           }}>
             Functional movement.<br />
             Consistent effort.<br />
             Zero ego.
           </p>
+
+          {/* Thick Black Dividers */}
+          <div style={{
+            width: '100%',
+            height: '12px',
+            backgroundColor: '#1a1a1a',
+            margin: '1.5rem 0',
+          }}></div>
+          <div style={{
+            width: '100%',
+            height: '12px',
+            backgroundColor: '#1a1a1a',
+            margin: '1.5rem 0',
+          }}></div>
+
+          {/* Bottom Dumbbell Icons */}
+          <div style={{
+            fontSize: '1.8rem',
+            marginTop: '1.5rem',
+            letterSpacing: '0.5rem',
+            display: 'flex',
+            justifyContent: 'center',
+            alignItems: 'center',
+            gap: '0.3rem',
+          }}>
+            <i className="fas fa-dumbbell" style={{ color: '#1a1a1a' }}></i>
+            <i className="fas fa-dumbbell" style={{ color: '#1a1a1a' }}></i>
+            <i className="fas fa-dumbbell" style={{ color: '#1a1a1a' }}></i>
+          </div>
         </div>
       </section>
 
@@ -489,7 +575,7 @@ export default function Home() {
               style={{
                 backgroundColor: '#FFD700',
                 color: '#1a1a1a',
-                padding: '1.2rem',
+                padding: '1rem 1rem 1rem 3rem',
                 borderRadius: '0.8rem',
                 textAlign: 'center',
                 fontWeight: 600,
@@ -497,13 +583,25 @@ export default function Home() {
                 boxShadow: '0 12px 32px rgba(255, 255, 255, 0.2)',
                 animation: visibleSections.has('who-work') ? `scaleIn 0.5s ease-out ${idx * 0.06}s forwards` : 'none',
                 opacity: visibleSections.has('who-work') ? 1 : 0,
-                height: '100px',
+                height: 'auto',
+                minHeight: '60px',
                 display: 'flex',
                 alignItems: 'center',
                 justifyContent: 'center',
                 lineHeight: 1.4,
+                position: 'relative',
               }}
             >
+              {/* Dumbbell Icon Stamp */}
+              <div style={{
+                position: 'absolute',
+                top: '-10px',
+                left: '12px',
+                fontSize: '1.8rem',
+                color: '#1a1a1a',
+              }}>
+                <i className="fas fa-dumbbell"></i>
+              </div>
               {item}
             </div>
           ))}
@@ -514,30 +612,79 @@ export default function Home() {
       <section style={{
         backgroundColor: '#FFD700',
         color: '#1a1a1a',
-        padding: '3rem 1.5rem',
+        padding: '2.5rem 1.5rem',
         textAlign: 'center',
       }}>
         <div style={{ maxWidth: '1000px', margin: '0 auto' }}>
-          <p style={{
-            fontSize: 'clamp(1.3rem, 4vw, 2rem)',
-            fontWeight: 800,
-            margin: '0 0 1.5rem 0',
-            fontFamily: 'Outfit, sans-serif',
-            lineHeight: 1.3,
-            color: '#ffffff',
+          {/* Top Dumbbell Icons */}
+          <div style={{
+            fontSize: '1.8rem',
+            marginBottom: '1.5rem',
+            letterSpacing: '0.5rem',
+            display: 'flex',
+            justifyContent: 'center',
+            alignItems: 'center',
+            gap: '0.3rem',
           }}>
-            Let's develop real strength and it starts with showing up.
-          </p>
+            <i className="fas fa-dumbbell" style={{ color: '#1a1a1a' }}></i>
+            <i className="fas fa-dumbbell" style={{ color: '#1a1a1a' }}></i>
+            <i className="fas fa-dumbbell" style={{ color: '#1a1a1a' }}></i>
+          </div>
+
+          {/* Text Content */}
           <p style={{
-            fontSize: 'clamp(1.3rem, 4vw, 2rem)',
+            fontSize: 'clamp(1.5rem, 4vw, 2rem)',
             fontWeight: 800,
             margin: 0,
             fontFamily: 'Outfit, sans-serif',
             lineHeight: 1.3,
+            marginBottom: '1.5rem',
+            color: '#1a1a1a',
+          }}>
+            Real strength starts with showing up.
+          </p>
+
+          {/* Thick Black Dividers */}
+          <div style={{
+            width: '100%',
+            height: '12px',
+            backgroundColor: '#1a1a1a',
+            margin: '1.5rem 0',
+          }}></div>
+          <div style={{
+            width: '100%',
+            height: '12px',
+            backgroundColor: '#1a1a1a',
+            margin: '1.5rem 0',
+          }}></div>
+
+          {/* Second Line */}
+          <p style={{
+            fontSize: 'clamp(1.5rem, 4vw, 2rem)',
+            fontWeight: 800,
+            margin: 0,
+            fontFamily: 'Outfit, sans-serif',
+            lineHeight: 1.3,
+            marginTop: '1.5rem',
             color: '#1a1a1a',
           }}>
             This is your first step.
           </p>
+
+          {/* Bottom Dumbbell Icons */}
+          <div style={{
+            fontSize: '1.8rem',
+            marginTop: '1.5rem',
+            letterSpacing: '0.5rem',
+            display: 'flex',
+            justifyContent: 'center',
+            alignItems: 'center',
+            gap: '0.3rem',
+          }}>
+            <i className="fas fa-dumbbell" style={{ color: '#1a1a1a' }}></i>
+            <i className="fas fa-dumbbell" style={{ color: '#1a1a1a' }}></i>
+            <i className="fas fa-dumbbell" style={{ color: '#1a1a1a' }}></i>
+          </div>
         </div>
       </section>
 
@@ -614,7 +761,7 @@ export default function Home() {
         </div>
       </section>
 
-      {/* WHAT I OFFER */}
+      {/* WHAT I OFFER - WITH TABS */}
       <section id="offer" data-animate style={{
         backgroundColor: '#1a1a1a',
         color: '#ffffff',
@@ -634,48 +781,58 @@ export default function Home() {
           What I Offer
         </h2>
 
+        {/* Tab Navigation */}
+        <div style={{
+          display: 'flex',
+          gap: '1rem',
+          justifyContent: 'center',
+          marginBottom: '2rem',
+          flexWrap: 'wrap',
+          maxWidth: '1200px',
+          margin: '0 auto 2rem auto',
+        }}>
+          {offers.map((offer, idx) => (
+            <button
+              key={idx}
+              onClick={() => setActiveTab(idx)}
+              style={{
+                padding: '0.75rem 1.5rem',
+                backgroundColor: activeTab === idx ? '#FFD700' : 'transparent',
+                color: activeTab === idx ? '#1a1a1a' : '#FFD700',
+                border: '2px solid #FFD700',
+                borderRadius: '0.6rem',
+                fontWeight: 700,
+                fontSize: '0.95rem',
+                cursor: 'pointer',
+                transition: 'all 0.3s ease',
+                fontFamily: 'Outfit, sans-serif',
+              }}
+              onMouseEnter={(e) => {
+                if (activeTab !== idx) {
+                  e.currentTarget.style.backgroundColor = 'rgba(255, 215, 0, 0.1)';
+                }
+              }}
+              onMouseLeave={(e) => {
+                if (activeTab !== idx) {
+                  e.currentTarget.style.backgroundColor = 'transparent';
+                }
+              }}
+            >
+              {offer.title}
+            </button>
+          ))}
+        </div>
+
+        {/* Tab Content - Carousel View */}
         <div style={{
           display: 'flex',
           gap: '1.5rem',
           overflowX: 'auto',
           paddingBottom: '1rem',
           scrollBehavior: 'smooth',
+          maxWidth: '100%',
         }} ref={carouselRef} className="carousel">
-          {[
-            {
-              title: 'Starter Consult',
-              items: [
-                '30-minute movement check',
-                'Find your pain points and goals',
-                'Get a simple home routine',
-                'Zero sales talk'
-              ],
-              price: 'FREE',
-              priceColor: '#FFD700'
-            },
-            {
-              title: 'Small Group',
-              items: [
-                'Max 5 guys',
-                'Build posture, mobility, real strength',
-                'Train outdoors or at a KL gym',
-                'WhatsApp support + form feedback'
-              ],
-              price: 'From RM60/person',
-              priceColor: '#FFD700'
-            },
-            {
-              title: '1-on-1 Coaching',
-              items: [
-                'Custom plan for home, gym, or outdoors',
-                'Programming that respects old injuries',
-                'Weekly check-ins',
-                'Nutrition basics included'
-              ],
-              price: 'From RM120/week',
-              priceColor: '#FFD700'
-            }
-          ].map((offer, idx) => (
+          {offers.map((offer, idx) => (
             <div
               key={idx}
               style={{
@@ -688,6 +845,8 @@ export default function Home() {
                 flexDirection: 'column',
                 animation: visibleSections.has('offer') ? `scaleIn 0.5s ease-out ${idx * 0.1}s forwards` : 'none',
                 opacity: visibleSections.has('offer') ? 1 : 0,
+                transform: activeTab === idx ? 'scale(1.02)' : 'scale(1)',
+                transition: 'transform 0.3s ease',
               }}
             >
               <h3 style={{
